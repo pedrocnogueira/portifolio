@@ -2,26 +2,28 @@ name: Deploy Nuxt 3 to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # or your main branch name
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # THIS IS IMPORTANT
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Use Node 18.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build the static site
+      - name: Generate static site
         run: npm run generate
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
