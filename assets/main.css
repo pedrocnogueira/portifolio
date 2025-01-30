@@ -1,1 +1,40 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 5vh 10vw;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pfp {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.pinspot .main {
+  display: flex;
+  flex-direction: row;
+}
+
+.pinspot .header .appstore {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.PSLogo {
+  scale: 0.5;
+}
