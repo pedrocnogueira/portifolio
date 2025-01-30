@@ -1,0 +1,33 @@
+.pinspot .main {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange appstore and desc side by side */
+  justify-content: flex-start; /* Align sections to the left */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Add spacing between the appstore and description */
+}
+
+.pinspot .main .appstore {
+  display: flex;
+  flex-direction: column; /* Stack the app icon and app store badge */
+  align-items: flex-start; /* Align items to the left */
+  gap: 10px; /* Add spacing between the app icon and badge */
+}
+
+.pinspot .main .desc {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-start; /* Align everything to the left */
+  text-align: left; /* Ensure text aligns left */
+}
+
+.pinspot .main .desc img {
+  display: block; /* Treat image as a block element */
+  width: 50%; /* Adjust the width (optional) */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add spacing below the image */
+}
+
+.pinspot .main .appstore img {
+  width: 20vw;
+  height: auto;
+}

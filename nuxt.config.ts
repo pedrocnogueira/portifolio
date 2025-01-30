@@ -10,9 +10,14 @@ export default defineNuxtConfig({
 
   alias: {
     "@": resolve(__dirname, "/"),
-    "@assets": resolve(__dirname, "assets"),
+    "@images": resolve(__dirname, "assets/images"),
   },
-  css: ["~/assets/main.css"],
+  css: [
+    "~/assets/css/main.css",
+    "~/assets/css/hero.css",
+    "~/assets/css/ADA.css",
+    "~/assets/css/pinspot.css",
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},

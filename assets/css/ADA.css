@@ -1,0 +1,9 @@
+.ADA .info {
+  display: flex;
+  flex-direction: row;
+}
+
+.ADA .info img {
+  width: 20vw;
+  height: auto;
+}
